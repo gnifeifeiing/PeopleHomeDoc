@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context="com.zkr.peoplehomedoc.ui.signdoc.SigningDocListActivity">
+
+    <com.zkr.peoplehomedoc.widget.TitleBarUtils
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_bar_height" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+        <EditText
+            android:id="@+id/et_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/signing_doc_list_search_et"
+            android:hint="家庭医生"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:text=""/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginRight="60dp"
+            android:src="@mipmap/icon_msg_search"/>
+    </FrameLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/bg_layout_line"/>
+    <ListView
+        android:id="@+id/lv_doc"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>
