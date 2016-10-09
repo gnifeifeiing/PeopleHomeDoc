@@ -12,6 +12,8 @@ import android.widget.TextView;
 
 import com.zkr.peoplehomedoc.R;
 import com.zkr.peoplehomedoc.ui.appointmentDoctor.AppointmentMainActivity;
+import com.zkr.peoplehomedoc.ui.docAdvice.DocAdviceListActivity;
+import com.zkr.peoplehomedoc.ui.mySigning.MySigningListActivity;
 import com.zkr.peoplehomedoc.ui.servicePlan.ServicePlanListActivity;
 import com.zkr.peoplehomedoc.utils.ActivityUtil;
 import com.zkr.peoplehomedoc.widget.FitListView;
@@ -33,6 +35,10 @@ public class Home_frag extends Fragment implements View.OnClickListener {
     LinearLayout llAppointment;
     @Bind(R.id.ll_service_plan)
     LinearLayout llServicePlan;
+    @Bind(R.id.ll_doc_advice)
+    LinearLayout llDocAdvice;
+    @Bind(R.id.ll_my_signing)
+    LinearLayout llMySigning;
 
     private List<String> list = new ArrayList<>();
     private MyAdapter adapter;
@@ -58,6 +64,8 @@ public class Home_frag extends Fragment implements View.OnClickListener {
 
         llAppointment.setOnClickListener(this);
         llServicePlan.setOnClickListener(this);
+        llDocAdvice.setOnClickListener(this);
+        llMySigning.setOnClickListener(this);
     }
 
     private void initData() {
@@ -77,6 +85,12 @@ public class Home_frag extends Fragment implements View.OnClickListener {
                 break;
             case R.id.ll_service_plan:
                 ActivityUtil.switchTo(getActivity(), ServicePlanListActivity.class, false);
+                break;
+            case R.id.ll_doc_advice:
+                ActivityUtil.switchTo(getActivity(), DocAdviceListActivity.class, false);
+                break;
+            case R.id.ll_my_signing:
+                ActivityUtil.switchTo(getActivity(), MySigningListActivity.class, false);
                 break;
         }
     }

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/level_second_text_size"
+        android:textColor="@color/black"
+        android:layout_margin="10dp"
+        android:text="高血压管理包   季度随访一次"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/bg_layout_line"/>
+
+    <TextView
+        android:id="@+id/tv_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="坚持每日散步1-1.5小时，放慢生活、工作节奏，保持快乐的心情。适当减少肉食的摄入量，以每日不超过4两（200g）为宜。"/>
+
+    <TextView
+        android:id="@+id/tv_name_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:text="某某卫生院  张敏瑞医生  2015-6-20 14:26:00 "
+        android:layout_marginLeft="10dp"/>
+</LinearLayout>

@@ -137,6 +137,7 @@
                         android:text="服务计划"/>
                 </LinearLayout>
                 <LinearLayout
+                    android:id="@+id/ll_doc_advice"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -161,6 +162,7 @@
                         android:text="医生建议"/>
                 </LinearLayout>
                 <LinearLayout
+                    android:id="@+id/ll_my_signing"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"

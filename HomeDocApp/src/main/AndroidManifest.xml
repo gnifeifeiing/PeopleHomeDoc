@@ -22,7 +22,11 @@
         <activity android:name=".ui.appointmentDoctor.AppointmentInfoActivity" />
         <activity android:name=".ui.servicePlan.ServicePlanListActivity" />
         <activity android:name=".ui.servicePlan.AppointmentListActivity" />
-        <activity android:name=".ui.servicePlan.AppointmentSucActivity"></activity>
+        <activity android:name=".ui.servicePlan.AppointmentSucActivity" />
+        <activity android:name=".ui.docAdvice.DocAdviceListActivity" />
+        <activity android:name=".ui.docAdvice.DocAdviceDetailActivity" />
+        <activity android:name=".ui.mySigning.MySigningListActivity" />
+        <activity android:name=".ui.mySigning.MySigningDetailActivity"></activity>
     </application>
 
 </manifest>
