@@ -57,7 +57,7 @@ public class PayActivity extends BaseActivity implements View.OnClickListener {
                 radiobutton1.setChecked(false);
                 break;
             case R.id.pay:
-                Intent intent=new Intent(getBaseContext(), MyReservationActivity.class);
+                Intent intent=new Intent(getBaseContext(), SignServeSucess.class);
                 startActivity(intent);
                 break;
         }
