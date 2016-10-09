@@ -1,10 +1,14 @@
 package com.zkr.peoplehomedoc.ui.user;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.zkr.peoplehomedoc.R;
 import com.zkr.peoplehomedoc.base.BaseActivity;
+import com.zkr.peoplehomedoc.ui.servicePlan.ServicePlanListActivity;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -33,5 +37,12 @@ public class UnreadMessagesActivity extends BaseActivity {
         list.add(map);
         MessageAdapter adapter = new MessageAdapter(list, UnreadMessagesActivity.this);
         listView6.setAdapter(adapter);
+        listView6.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent=new Intent(getBaseContext(), ServicePlanListActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }

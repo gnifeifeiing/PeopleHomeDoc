@@ -834,6 +834,7 @@ int id normal 0x7f0b000a
 int id open 0x7f0b001c
 int id pager_view 0x7f0b00a8
 int id parentPanel 0x7f0b0031
+int id paybutton 0x7f0b00c1
 int id pb_load_local 0x7f0b0056
 int id percentage 0x7f0b0085
 int id primary_menu 0x7f0b006b
@@ -1001,10 +1002,11 @@ int layout notification_template_lines 0x7f03004e
 int layout notification_template_media 0x7f03004f
 int layout notification_template_part_chronometer 0x7f030050
 int layout notification_template_part_time 0x7f030051
-int layout select_dialog_item_material 0x7f030052
-int layout select_dialog_multichoice_material 0x7f030053
-int layout select_dialog_singlechoice_material 0x7f030054
-int layout support_simple_spinner_dropdown_item 0x7f030055
+int layout pup_pay 0x7f030052
+int layout select_dialog_item_material 0x7f030053
+int layout select_dialog_multichoice_material 0x7f030054
+int layout select_dialog_singlechoice_material 0x7f030055
+int layout support_simple_spinner_dropdown_item 0x7f030056
 int string Add_a_button_was_clicked 0x7f050083
 int string Add_a_friend 0x7f050084
 int string Add_group_members_fail 0x7f050085

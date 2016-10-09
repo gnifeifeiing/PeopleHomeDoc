@@ -48,6 +48,10 @@
         "source": "F:\\Mytest\\PeopleHomeDoc\\easeui\\res\\layout\\ease_fragment_chat.xml"
     },
     {
+        "merged": "F:\\Mytest\\PeopleHomeDoc\\easeui\\build\\intermediates\\res\\merged\\release\\layout\\pup_pay.xml",
+        "source": "F:\\Mytest\\PeopleHomeDoc\\easeui\\res\\layout\\pup_pay.xml"
+    },
+    {
         "merged": "F:\\Mytest\\PeopleHomeDoc\\easeui\\build\\intermediates\\res\\merged\\release\\layout\\ease_row_received_message.xml",
         "source": "F:\\Mytest\\PeopleHomeDoc\\easeui\\res\\layout\\ease_row_received_message.xml"
     },

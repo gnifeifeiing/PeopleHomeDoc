@@ -2212,6 +2212,7 @@ containing a value of this type.
         public static int open=0x7f0b001c;
         public static int pager_view=0x7f0b00a8;
         public static int parentPanel=0x7f0b0031;
+        public static int paybutton=0x7f0b00c1;
         public static int pb_load_local=0x7f0b0056;
         public static int percentage=0x7f0b0085;
         public static int primary_menu=0x7f0b006b;
@@ -2383,10 +2384,11 @@ containing a value of this type.
         public static int notification_template_media=0x7f03004f;
         public static int notification_template_part_chronometer=0x7f030050;
         public static int notification_template_part_time=0x7f030051;
-        public static int select_dialog_item_material=0x7f030052;
-        public static int select_dialog_multichoice_material=0x7f030053;
-        public static int select_dialog_singlechoice_material=0x7f030054;
-        public static int support_simple_spinner_dropdown_item=0x7f030055;
+        public static int pup_pay=0x7f030052;
+        public static int select_dialog_item_material=0x7f030053;
+        public static int select_dialog_multichoice_material=0x7f030054;
+        public static int select_dialog_singlechoice_material=0x7f030055;
+        public static int support_simple_spinner_dropdown_item=0x7f030056;
     }
     public static final class string {
         public static int Add_a_button_was_clicked=0x7f050083;
