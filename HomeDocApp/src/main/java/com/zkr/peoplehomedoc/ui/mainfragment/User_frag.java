@@ -12,6 +12,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.zkr.peoplehomedoc.R;
+import com.zkr.peoplehomedoc.ui.servicePlan.ServicePlanListActivity;
 import com.zkr.peoplehomedoc.ui.user.MyReservationActivity;
 import com.zkr.peoplehomedoc.ui.user.UnreadMessagesActivity;
 
@@ -34,8 +35,8 @@ public class User_frag extends Fragment {
     TextView textView8;
     @Bind(R.id.textView9)
     TextView textView9;
-    @Bind(R.id.wodejiuzhenren)
-    RelativeLayout wodejiuzhenren;
+    @Bind(R.id.weiwanfuwu)
+    RelativeLayout weiwanfuwu;
     @Bind(R.id.dangan)
     LinearLayout dangan;
     @Bind(R.id.myyuyue)
@@ -70,6 +71,20 @@ public class User_frag extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(getActivity(), MyReservationActivity.class);
+                startActivity(intent);
+            }
+        });
+        myyuyue.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getActivity(), MyReservationActivity.class);
+                startActivity(intent);
+            }
+        });
+        weiwanfuwu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getActivity(), ServicePlanListActivity.class);
                 startActivity(intent);
             }
         });
