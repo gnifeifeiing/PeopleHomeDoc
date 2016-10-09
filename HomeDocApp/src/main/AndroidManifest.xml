@@ -18,11 +18,12 @@
         </activity>
         <activity android:name=".ui.signdoc.SigningDocListActivity" />
         <activity android:name=".ui.signdoc.SigningUserActivity" />
-        <activity android:name=".ui.appointmentDoctor.AppointmentMainActivity" />
-        <activity android:name=".ui.appointmentDoctor.AppointmentInfoActivity" />
-        <activity android:name=".ui.servicePlan.ServicePlanListActivity" />
-        <activity android:name=".ui.servicePlan.AppointmentListActivity" />
-        <activity android:name=".ui.servicePlan.AppointmentSucActivity"></activity>
+        <activity android:name=".ui.mainfragment.Chat_frag" />
+        <activity android:name=".ui.mainfragment.Service_frag" />
+        <activity android:name=".ui.signdoc.SignDocList_Activity" />
+        <activity android:name=".ui.signdoc.Sign_Doc_Userinfo_Activity" />
+        <activity android:name=".ui.signdoc.Signing_SucessActivity" />
+        <activity android:name=".ui.user.UnreadMessagesActivity"></activity>
     </application>
 
 </manifest>

@@ -1,6 +1,5 @@
 package com.zkr.peoplehomedoc.ui.mainfragment;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,9 +12,8 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.zkr.peoplehomedoc.R;
+import com.zkr.peoplehomedoc.ui.signdoc.SignDocList_Activity;
 import com.zkr.peoplehomedoc.ui.signdoc.SigningDocListActivity;
-import com.zkr.peoplehomedoc.utils.ActivityUtil;
-import com.zkr.peoplehomedoc.widget.FitListView;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -28,101 +26,50 @@ import butterknife.ButterKnife;
 public class Signing_frag extends Fragment implements View.OnClickListener {
 
     View view;
-    @Bind(R.id.lv_doc)
-    FitListView lvDoc;
-    @Bind(R.id.btn_signing)
-    Button btnSigning;
-
+    @Bind(R.id.firstsign)
+    Button firstsign;
+    @Bind(R.id.signning)
+    Button signning;
     private List<Map<String, String>> list = new ArrayList<>();
-    private MyAdapter adapter;
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.activity_signing_frag, null);
+        view = inflater.inflate(R.layout.frag_signing, null);
         ButterKnife.bind(this, view);
         init();
         return view;
     }
 
     private void init() {
-        initData();
-        initWidget();
         initListener();
     }
 
     private void initListener() {
-        btnSigning.setOnClickListener(this);
+        firstsign.setOnClickListener(this);
+        signning.setOnClickListener(this);
     }
 
-    private void initWidget() {
-        adapter = new MyAdapter(getActivity());
-        lvDoc.setAdapter(adapter);
-        //解决页面切换后总显示listview问题，而不显示其他view
-        lvDoc.setFocusable(false);
-    }
+//    private void initWidget() {
+//        adapter = new MyAdapter(getActivity());
+//        lvDoc.setAdapter(adapter);
+//        //解决页面切换后总显示listview问题，而不显示其他view
+//        lvDoc.setFocusable(false);
+//    }
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
-            case R.id.btn_signing:
-                Intent intent=new Intent(getActivity(),SigningDocListActivity.class);
+        switch (v.getId()) {
+            case R.id.firstsign:
+                Intent intent = new Intent(getActivity(), SignDocList_Activity.class);
                 startActivity(intent);
+//                ActivityUtil.switchTo(getActivity(), SigningDocListActivity.class,false);
+                break;
+            case R.id.signning:
+                Intent intent1 = new Intent(getActivity(), SigningDocListActivity.class);
+                startActivity(intent1);
 //                ActivityUtil.switchTo(getActivity(), SigningDocListActivity.class,false);
                 break;
             default:
                 break;
-        }
-    }
-
-    private class MyAdapter extends BaseAdapter {
-        private LayoutInflater mInflater;
-
-        public MyAdapter(Context context) {
-            // TODO Auto-generated constructor stub
-            mInflater = LayoutInflater.from(context);
-        }
-
-        @Override
-        public int getCount() {
-            // TODO Auto-generated method stub
-            return list.size();
-        }
-
-        @Override
-        public Object getItem(int position) {
-            // TODO Auto-generated method stub
-            return list.get(position);
-        }
-
-        @Override
-        public long getItemId(int position) {
-            // TODO Auto-generated method stub
-            return position;
-        }
-
-        @Override
-        public View getView(final int position, View convertView, ViewGroup parent) {
-            // TODO Auto-generated method stub
-            ViewHolder viewHolder = null;
-            if (convertView == null) {
-                viewHolder = new ViewHolder();
-                convertView = mInflater.inflate(R.layout.signing_frag_list_item, null);
-                viewHolder.tv_doc_name = (TextView) convertView.findViewById(R.id.tv_doc_name);
-                viewHolder.tv_doc_dept = (TextView) convertView.findViewById(R.id.tv_doc_dept);
-                viewHolder.tv_doc_desc = (TextView) convertView.findViewById(R.id.tv_doc_desc);
-                convertView.setTag(viewHolder);
-            } else {
-                viewHolder = (ViewHolder) convertView.getTag();
-            }
-
-            viewHolder.tv_doc_name.setText(list.get(position).get("name").toString());
-            viewHolder.tv_doc_dept.setText(list.get(position).get("dept").toString());
-            viewHolder.tv_doc_desc.setText(list.get(position).get("desc").toString());
-            return convertView;
-        }
-
-        class ViewHolder {
-            TextView tv_doc_name, tv_doc_dept, tv_doc_desc;
         }
     }
 

@@ -7,34 +7,28 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.zkr.peoplehomedoc.R;
-import com.zkr.peoplehomedoc.ui.appointmentDoctor.AppointmentMainActivity;
-import com.zkr.peoplehomedoc.ui.servicePlan.ServicePlanListActivity;
-import com.zkr.peoplehomedoc.utils.ActivityUtil;
 import com.zkr.peoplehomedoc.widget.FitListView;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
 
-public class Home_frag extends Fragment implements View.OnClickListener {
+public class Home_frag extends Fragment {
 
     View view;
 
     @Bind(R.id.lv_doc_advice)
     FitListView lvDocAdvice;
-    @Bind(R.id.ll_appointment)
-    LinearLayout llAppointment;
-    @Bind(R.id.ll_service_plan)
-    LinearLayout llServicePlan;
 
-    private List<String> list = new ArrayList<>();
+    private List<String> list=new ArrayList<>();
     private MyAdapter adapter;
 
     @Override
@@ -51,34 +45,18 @@ public class Home_frag extends Fragment implements View.OnClickListener {
     }
 
     private void initWidget() {
-        adapter = new MyAdapter(getActivity());
+        adapter=new MyAdapter(getActivity());
         lvDocAdvice.setAdapter(adapter);
         //解决页面切换后总显示listview问题，而不显示其他view
         lvDocAdvice.setFocusable(false);
-
-        llAppointment.setOnClickListener(this);
-        llServicePlan.setOnClickListener(this);
     }
 
     private void initData() {
-        list.add("让我们人人参与三减，努力实现三健");
-        list.add("让我们人人参与三减，努力实现三健");
-        list.add("让我们人人参与三减，努力实现三健");
-        list.add("让我们人人参与三减，努力实现三健");
-        list.add("让我们人人参与三减，努力实现三健");
-        list.add("让我们人人参与三减，努力实现三健");
-    }
-
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.ll_appointment:
-                ActivityUtil.switchTo(getActivity(), AppointmentMainActivity.class, false);
-                break;
-            case R.id.ll_service_plan:
-                ActivityUtil.switchTo(getActivity(), ServicePlanListActivity.class, false);
-                break;
-        }
+        list.add("坚持每日散步1-1.5小时，放慢生活、工作节奏，更多的感受快乐。");
+        list.add("适当减少肉食的摄入量，以每日不超过4两（200g）为宜；");
+        list.add("坚持带太阳眼镜对保护你的眼睛远离白内障等各种眼疾非常重要。");
+        list.add("别在身体感到疲劳时喝咖啡或浓茶来提神，会对心血管系统造成伤害。");
+        list.add("一年染发4次以上，出现头晕、偏头痛，促使血小板降低。");
     }
 
     private class MyAdapter extends BaseAdapter {
@@ -115,7 +93,6 @@ public class Home_frag extends Fragment implements View.OnClickListener {
                 viewHolder = new ViewHolder();
                 convertView = mInflater.inflate(R.layout.home_list_item, null);
                 viewHolder.title = (TextView) convertView.findViewById(R.id.tv_title);
-                viewHolder.content = (TextView) convertView.findViewById(R.id.tv_content);
                 convertView.setTag(viewHolder);
             } else {
                 viewHolder = (ViewHolder) convertView.getTag();
@@ -126,7 +103,7 @@ public class Home_frag extends Fragment implements View.OnClickListener {
         }
 
         class ViewHolder {
-            TextView title, content;
+            TextView title;
         }
     }
 

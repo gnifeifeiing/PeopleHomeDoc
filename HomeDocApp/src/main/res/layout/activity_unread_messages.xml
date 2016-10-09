@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#dbd9d2"
-    android:orientation="vertical">
-
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context="com.zkr.peoplehomedoc.ui.user.UnreadMessagesActivity">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/title_bar_height"
@@ -13,29 +14,24 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="我的"
+            android:text="消息中心"
             android:textColor="@color/white"
             android:textSize="@dimen/level_title_text_size"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:textStyle="bold" />
-
     </RelativeLayout>
-    <ScrollView
+
+    <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scrollbars="none">
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <include layout="@layout/index_my_list1"/>
-            <View
-                android:background="#F2F2F2"
-                android:layout_width="match_parent"
-                android:layout_height="8dp"/>
-            <include layout="@layout/index_my_list2"/>
-        </LinearLayout>
-    </ScrollView>
-</LinearLayout>
+        android:id="@+id/listView6"
+        android:dividerHeight="10dp"
+        android:layout_margin="10dp"
+        android:divider="#ffffff"
+        android:scrollbars="none"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
+</LinearLayout>
