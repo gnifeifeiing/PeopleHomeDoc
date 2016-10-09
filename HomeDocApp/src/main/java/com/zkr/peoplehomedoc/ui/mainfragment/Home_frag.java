@@ -97,6 +97,7 @@ public class Home_frag extends Fragment implements View.OnClickListener {
         }
     }
 
+
     private class MyAdapter extends BaseAdapter {
         private LayoutInflater mInflater;
 
