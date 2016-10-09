@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context="com.zkr.peoplehomedoc.ui.appointmentDoctor.InstructFrag">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="1、预约就诊服务只能预约已签约的家庭医生；网上预约一律采用实名制，填写信息与身份证上的姓名和卡号一致，联系方式必须为手机号码，以便有事及时联系您。"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="2、网上预约挂号服务免费，挂号费在来院就诊时收取。"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="3、网上预约时间为十天，且必须提前一个工作日。"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="4、预约成功后，医院将在就诊前一天下午15：00后对您电话确认生效。您必须在就诊前一天17：00前确认是否按时赴诊。"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="5、预约成功后必须按时就诊，若遇特殊情况无法按时前来就诊，必须提前一个工作日电话（0575-88619954）告知取消，否则按失约处理，累计超过三次将列入黑名单取消预约资格。"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="6、凭社保卡或健康卡于就诊当天到门诊大楼一楼挂号窗口取号，上午就诊号11:55必须前取，下午就诊号在16:55必须前取，过时预约挂号单作废,就诊时请出示身份证、社保卡或健康卡（自费），进行取号就诊。"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="9、预约联系电话：0575-88619954（工作时间：上午8：00～12：00；下午14：00～16：00）。"/>
+
+</LinearLayout>
+</ScrollView>
