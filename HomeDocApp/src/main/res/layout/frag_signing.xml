@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_bar_height"
+        android:background="#00bca4">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="我要签约"
+            android:textColor="@color/white"
+            android:textSize="@dimen/level_title_text_size"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:textStyle="bold" />
+    </RelativeLayout>
+    <Button
+        android:layout_width="160dp"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="首次签约"
+        android:textSize="@dimen/et_text_size"
+        android:background="@drawable/signing_frag_header_btn"
+        android:id="@+id/firstsign" />
+    <Button
+        android:layout_width="160dp"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="已签约"
+        android:textSize="@dimen/et_text_size"
+        android:background="@drawable/signing_frag_header_btn"
+        android:id="@+id/signning" />
+
+</LinearLayout>

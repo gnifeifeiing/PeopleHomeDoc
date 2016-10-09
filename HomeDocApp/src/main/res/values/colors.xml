@@ -309,4 +309,5 @@
     <!--灰色-->
     <color name="secondtextcolor">#999999</color>
     <color name="bg_wait">#f0f0f0</color>
+    <color name="bg_text">#00C858</color>
 </resources>

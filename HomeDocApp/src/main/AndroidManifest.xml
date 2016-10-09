@@ -2,6 +2,21 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.zkr.peoplehomedoc">
 
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
     <application
         android:name=".MyApplication"
         android:allowBackup="true"
@@ -9,6 +24,12 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <meta-data
+            android:name="EASEMOB_APPKEY"
+            android:value="z27982688#homedoc" />
+        <!-- 声明sdk所需的service SDK核心功能 -->
+        <service android:name="com.easemob.chat.EMChatService" />
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,6 +48,16 @@
         <activity android:name=".ui.docAdvice.DocAdviceDetailActivity" />
         <activity android:name=".ui.mySigning.MySigningListActivity" />
         <activity android:name=".ui.mySigning.MySigningDetailActivity"></activity>
+        <activity android:name=".ui.signdoc.SignDocList_Activity" />
+        <activity android:name=".ui.signdoc.Sign_Doc_Userinfo_Activity" />
+        <activity android:name=".ui.signdoc.Signing_SucessActivity" />
+        <activity android:name=".ui.user.UnreadMessagesActivity" />
+        <activity android:name=".ui.user.MyReservationActivity" />
+        <activity android:name=".ui.signdoc.SubmitOrderActivity" />
+        <activity android:name=".ui.signdoc.PayActivity" />
+        <activity android:name=".ui.signdoc.SignningServerListActivity" />
+        <activity android:name=".ui.signdoc.SignServeSucess" />
+        <activity android:name=".ui.news.NewsDetail"></activity>
     </application>
 
 </manifest>

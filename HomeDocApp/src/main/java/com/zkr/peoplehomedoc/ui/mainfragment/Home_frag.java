@@ -19,7 +19,9 @@ import com.zkr.peoplehomedoc.utils.ActivityUtil;
 import com.zkr.peoplehomedoc.widget.FitListView;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -40,7 +42,7 @@ public class Home_frag extends Fragment implements View.OnClickListener {
     @Bind(R.id.ll_my_signing)
     LinearLayout llMySigning;
 
-    private List<String> list = new ArrayList<>();
+    private List<String> list=new ArrayList<>();
     private MyAdapter adapter;
 
     @Override
@@ -57,7 +59,7 @@ public class Home_frag extends Fragment implements View.OnClickListener {
     }
 
     private void initWidget() {
-        adapter = new MyAdapter(getActivity());
+        adapter=new MyAdapter(getActivity());
         lvDocAdvice.setAdapter(adapter);
         //解决页面切换后总显示listview问题，而不显示其他view
         lvDocAdvice.setFocusable(false);
@@ -129,7 +131,6 @@ public class Home_frag extends Fragment implements View.OnClickListener {
                 viewHolder = new ViewHolder();
                 convertView = mInflater.inflate(R.layout.home_list_item, null);
                 viewHolder.title = (TextView) convertView.findViewById(R.id.tv_title);
-                viewHolder.content = (TextView) convertView.findViewById(R.id.tv_content);
                 convertView.setTag(viewHolder);
             } else {
                 viewHolder = (ViewHolder) convertView.getTag();
@@ -140,7 +141,7 @@ public class Home_frag extends Fragment implements View.OnClickListener {
         }
 
         class ViewHolder {
-            TextView title, content;
+            TextView title;
         }
     }
 

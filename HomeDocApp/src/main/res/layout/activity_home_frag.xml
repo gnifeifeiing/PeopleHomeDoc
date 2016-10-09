@@ -48,17 +48,6 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:orientation="horizontal">
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:scaleType="fitXY"
-                    android:src="@mipmap/home_welcome01"/>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#fff9e3"
                 android:orientation="horizontal">
@@ -80,6 +69,57 @@
                     android:layout_marginLeft="5dp"
                     android:text="新消息：医生更新了您的服务计划，快来确认吧！"/>
             </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/home_head_plan_shape"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="最近计划"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:background="#00bca4"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:text="高血压管理计划"
+                        android:gravity="center"
+                        android:textSize="@dimen/level_second_text_size"/>
+                </LinearLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:background="@drawable/home_head_plan_ll_two_shape"
+                    android:layout_height="60dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:text="请记得于3月5日上午到卫生院来随访哦。"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:text="改约"
+                        android:textColor="@color/white"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="5dp"
+                        android:padding="5dp"
+                        android:background="@drawable/home_head_plan_btn_shape"/>
+                </RelativeLayout>
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -87,54 +127,38 @@
                 android:layout_margin="10dp"
                 android:orientation="horizontal">
                 <LinearLayout
-                    android:id="@+id/ll_appointment"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
                     android:orientation="vertical">
-                    <LinearLayout
-                        android:layout_width="55dp"
-                        android:layout_height="55dp"
-                        android:background="@drawable/home_module_one_ll"
-                        android:gravity="center"
-                        android:orientation="horizontal">
-                        <View
-                            android:layout_width="20dp"
-                            android:layout_height="25dp"
-                            android:background="@drawable/home_module_one"/>
-                    </LinearLayout>
+                    <ImageView
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:src="@mipmap/quick_doctor"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
                         android:textSize="@dimen/level_second_text_size"
-                        android:text="预约就诊"/>
+                        android:text="快捷就医"/>
                 </LinearLayout>
                 <LinearLayout
-                    android:id="@+id/ll_service_plan"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
                     android:orientation="vertical">
-                    <LinearLayout
-                        android:layout_width="55dp"
-                        android:layout_height="55dp"
-                        android:background="@drawable/home_module_two_ll"
-                        android:gravity="center"
-                        android:orientation="horizontal">
-                        <View
-                            android:layout_width="20dp"
-                            android:layout_height="25dp"
-                            android:background="@drawable/home_module_one"/>
-                    </LinearLayout>
+                    <ImageView
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:src="@mipmap/signing_doc"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
                         android:textSize="@dimen/level_second_text_size"
-                        android:text="服务计划"/>
+                        android:text="签约医生"/>
                 </LinearLayout>
                 <LinearLayout
                     android:id="@+id/ll_doc_advice"
@@ -143,23 +167,16 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:orientation="vertical">
-                    <LinearLayout
-                        android:layout_width="55dp"
-                        android:layout_height="55dp"
-                        android:background="@drawable/home_module_three_ll"
-                        android:gravity="center"
-                        android:orientation="horizontal">
-                        <View
-                            android:layout_width="20dp"
-                            android:layout_height="25dp"
-                            android:background="@drawable/home_module_one"/>
-                    </LinearLayout>
+                    <ImageView
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:src="@mipmap/health_vs"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="@dimen/level_second_text_size"
                         android:layout_marginTop="5dp"
-                        android:text="医生建议"/>
+                        android:text="健康随访"/>
                 </LinearLayout>
                 <LinearLayout
                     android:id="@+id/ll_my_signing"
@@ -168,146 +185,158 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:orientation="vertical">
-                    <LinearLayout
-                        android:layout_width="55dp"
-                        android:layout_height="55dp"
-                        android:background="@drawable/home_module_four_ll"
-                        android:gravity="center"
-                        android:orientation="horizontal">
-                        <View
-                            android:layout_width="20dp"
-                            android:layout_height="25dp"
-                            android:background="@drawable/home_module_one"/>
-                    </LinearLayout>
+                    <ImageView
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:src="@mipmap/health_mg"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="@dimen/level_second_text_size"
                         android:layout_marginTop="5dp"
-                        android:text="我的签约"/>
+                        android:text="健康管理"/>
                 </LinearLayout>
             </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="10dp"
-                android:background="#dbd8d3"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:gravity="center"
+                android:orientation="horizontal">
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="#d0cdc7"
+                    android:layout_weight="1"/>
                 <TextView
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:textColor="@color/black"
-                    android:textSize="@dimen/level_second_text_size"
-                    android:text="下次服务"/>
+                    android:text="我的健康管理"/>
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:background="#cccccc"/>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:orientation="horizontal">
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="70dp"
-                        android:layout_weight="1"
-                        android:gravity="center_vertical"
-                        android:orientation="vertical">
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp"
-                            android:text="高血压管理包    季度随访"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:layout_marginLeft="10dp"
-                            android:text="预约服务事件：2016-10-30下午"/>
-                    </LinearLayout>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="改约"
-                        android:textColor="@color/white"
-                        android:layout_marginRight="10dp"
-                        android:paddingLeft="10dp"
-                        android:paddingRight="10dp"
-                        android:paddingTop="5dp"
-                        android:paddingBottom="5dp"
-                        android:background="#68d100"/>
-                </LinearLayout>
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="#cccccc"/>
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/black"
-                        android:padding="10dp"
-                        android:textSize="@dimen/level_second_text_size"
-                        android:text="最近服务"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentRight="true"
-                        android:padding="10dp"
-                        android:layout_marginRight="20dp"
-                        android:text="2016-10-25    14:30:00"/>
-                </RelativeLayout>
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="#cccccc"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:lineSpacingExtra="5dp"
-                    android:text="医生建议:坚持每日散步1-1.5小时，放慢生活、工作节奏，保持快乐的心情。适当减少肉食的摄入量，以每日不超过4两（200g）为宜。"/>
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="#d0cdc7"
+                    android:layout_weight="1"/>
             </LinearLayout>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="10dp"
-                android:background="#dbd8d3"/>
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/black"
-                    android:padding="10dp"
-                    android:textSize="@dimen/level_second_text_size"
-                    android:text="健康知识"/>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_margin="10dp"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/home_health_mg_shape"
+                    android:orientation="vertical">
+                    <View
+                        android:layout_width="15dp"
+                        android:background="@drawable/home_health_view_border_shape"
+                        android:layout_height="25dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textSize="@dimen/level_second_text_size"
+                        android:text="身高体重"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/home_health_mg_shape"
+                    android:orientation="vertical">
+                    <View
+                        android:layout_width="15dp"
+                        android:background="@drawable/home_health_view_border_shape"
+                        android:layout_height="25dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textSize="@dimen/level_second_text_size"
+                        android:text="记录血压"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/home_health_mg_shape"
+                    android:orientation="vertical">
+                    <View
+                        android:layout_width="15dp"
+                        android:background="@drawable/home_health_view_border_shape"
+                        android:layout_height="25dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textSize="@dimen/level_second_text_size"
+                        android:text="记录血糖"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/home_health_mg_shape"
+                    android:orientation="vertical">
+                    <View
+                        android:layout_width="15dp"
+                        android:background="@drawable/home_health_view_border_shape"
+                        android:layout_height="25dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textSize="@dimen/level_second_text_size"
+                        android:text="饮食运动"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="#d0cdc7"
+                    android:layout_weight="1"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:padding="10dp"
-                    android:layout_marginRight="20dp"
-                    android:text="查看全部>"/>
-            </RelativeLayout>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="#cccccc"/>
+                    android:text="家医最近建议"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="#d0cdc7"
+                    android:layout_weight="1"/>
+            </LinearLayout>
 
             <com.zkr.peoplehomedoc.widget.FitListView
                 android:id="@+id/lv_doc_advice"
+                android:layout_margin="10dp"
+                android:dividerHeight="5dp"
                 android:divider="@color/white"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>

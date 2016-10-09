@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context="com.zkr.peoplehomedoc.ui.signdoc.Signing_SucessActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_bar_height"
+        android:background="#00bca4">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="签约服务"
+            android:textColor="@color/white"
+            android:textSize="@dimen/level_title_text_size"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:textStyle="bold" />
+    </RelativeLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+  <TextView
+      android:layout_margin="10dp"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textColor="@color/defaulttextcolor"
+      android:textSize="@dimen/level_title_text_size"
+      android:textStyle="bold"
+      android:text="宋瑞"
+      />
+    <TextView
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/defaulttextcolor"
+        android:textSize="@dimen/et_text_size"
+        android:text="男    72岁"
+        />
+    <TextView
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/defaulttextcolor"
+        android:textSize="@dimen/et_text_size"
+        android:text="身份证号：130110194409270816"
+        />
+    <TextView
+
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/defaulttextcolor"
+        android:textSize="@dimen/et_text_size"
+        android:text="联系电话：13509092499"
+        />
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/defaulttextcolor"
+        android:textSize="@dimen/et_text_size"
+        android:text="签约机构：某某卫生院"
+        />
+    <TextView
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/defaulttextcolor"
+        android:textSize="@dimen/et_text_size"
+        android:text="签约医生：张敏瑞"
+        />
+    <TextView
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/defaulttextcolor"
+        android:textSize="@dimen/et_text_size"
+        android:text="签约时间：2015-6-20 14:26:00"
+        />
+
+
+
+    <TextView
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/defaulttextcolor"
+        android:textSize="@dimen/et_text_size"
+        android:text="签约服务包："
+        />
+    <TextView
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/defaulttextcolor"
+        android:textSize="@dimen/et_text_size"
+        android:text="高血压管理包                         X1                       0元"
+        />
+    <TextView
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/defaulttextcolor"
+        android:textSize="@dimen/et_text_size"
+        android:text="中医保健包                            X1                     39元"
+        />
+    <TextView
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/defaulttextcolor"
+        android:textSize="@dimen/et_text_size"
+        android:text="总计 39元                                                实付 39元"
+        />
+    <Button
+        android:layout_width="160dp"
+        android:layout_marginTop="100dp"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="提交订单"
+        android:textSize="@dimen/et_text_size"
+        android:background="@drawable/signing_frag_header_btn"
+        android:id="@+id/submmit" />
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>

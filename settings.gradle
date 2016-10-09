@@ -1,1 +1,1 @@
-include ':HomeDocApp'
+include ':HomeDocApp', ':easeui'

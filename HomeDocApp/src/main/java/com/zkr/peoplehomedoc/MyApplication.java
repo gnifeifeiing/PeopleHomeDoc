@@ -6,6 +6,8 @@ import android.util.Log;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.Volley;
+import com.hyphenate.chat.EMOptions;
+import com.hyphenate.easeui.controller.EaseUI;
 import com.zkr.peoplehomedoc.utils.Constants;
 import com.zkr.peoplehomedoc.utils.OptsharepreInterface;
 import com.zkr.peoplehomedoc.utils.UncaughtException;
@@ -32,6 +34,12 @@ public class MyApplication extends Application {
     public void onCreate() {
         super.onCreate();
         singleton = this;
+        EMOptions options = new EMOptions();
+        options.setMipushConfig("2882303761517500800", "5371750035800");//小米推送的
+        // 默认添加好友时，是不需要验证的，改成需要验证,true:自动验证,false,手动验证
+        options.setAcceptInvitationAlways(true);
+        //初始化
+        EaseUI.getInstance().init(this, options);
         singleQueue= Volley.newRequestQueue(this);
         //读取配置信息 确认是否已登陆
         share=new OptsharepreInterface(getApplicationContext());

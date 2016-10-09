@@ -25,7 +25,17 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scrollbars="none">
-
-
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <include layout="@layout/index_my_list1"/>
+            <View
+                android:background="#F2F2F2"
+                android:layout_width="match_parent"
+                android:layout_height="8dp"/>
+            <include layout="@layout/index_my_list2"/>
+        </LinearLayout>
     </ScrollView>
 </LinearLayout>
+

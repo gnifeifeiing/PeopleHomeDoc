@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context="com.zkr.peoplehomedoc.ui.signdoc.Signing_SucessActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_bar_height"
+        android:background="#00bca4">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="签约医生"
+            android:textColor="@color/white"
+            android:textSize="@dimen/level_title_text_size"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:textStyle="bold" />
+    </RelativeLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:textSize="@dimen/btn_text_size"
+                android:text="某某卫生院  张芸医生"
+                android:textColor="@color/defaulttextcolor"
+                android:textStyle="bold"
+                />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="10dp"
+                android:background="#CCCCCC"
+                />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp">
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@mipmap/doctor_header"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:paddingLeft="50dp"
+                  android:text="恭喜您，签约成功！"
+                  android:textColor="#00BCA4"
+                  android:textSize="@dimen/btn_text_size"
+                  android:layout_centerVertical="true"
+                  android:layout_centerHorizontal="true" />
+            </RelativeLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="为您推荐服务"
+                android:textColor="#00BCA4"
+                android:textSize="@dimen/btn_text_size"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="10dp"
+                android:background="#CCCCCC"
+                />
+
+            <Button
+                android:layout_width="160dp"
+                android:layout_marginTop="40dp"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="签约服务项目"
+                android:textSize="@dimen/et_text_size"
+                android:background="@drawable/signing_frag_header_btn"
+                android:id="@+id/signing" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context="com.zkr.peoplehomedoc.ui.signdoc.Signing_SucessActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_bar_height"
+        android:background="#00bca4">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="健康知识"
+            android:textColor="@color/white"
+            android:textSize="@dimen/level_title_text_size"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:textStyle="bold" />
+    </RelativeLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+    <TextView
+        android:layout_margin="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="饮茶的益处"
+        android:textColor="@color/defaulttextcolor"
+        android:textStyle="bold"
+        android:textSize="@dimen/level_title_text_size"
+        />
+    <TextView
+        android:layout_margin="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2015-11-18   管理员"
+        android:textColor="@color/defaulttextcolor"
+        android:textSize="@dimen/et_text_size"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:textColor="@color/defaulttextcolor"
+        android:text="我国悠久的茶文化表明，常喝茶益于身体健康。唐朝诗人顾况在《茶赋》中写道：“滋饭蔬之精素、攻肉食之膻腻、发当暑之清吟、涤通宵之昏寐。”说的正是茶对人体的好处。
+
+据传说“神农尝百草，日遇七十二毒，得茶而解之。”唐代大医学家陈藏器在《本草拾遗》一书中写道：“诸药为各病之药，茶为万病之药。”足见茶之药功卓著。"
+        />
+   <ImageView
+       android:layout_margin="10dp"
+       android:layout_width="match_parent"
+       android:layout_height="300dp"
+       android:scaleType="fitXY"
+       android:src="@mipmap/news1"
+       />
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>
