@@ -12,6 +12,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.hyphenate.easeui.EaseConstant;
+import com.hyphenate.easeui.ui.EaseChatFragment;
 import com.zkr.peoplehomedoc.base.BaseActivity;
 import com.zkr.peoplehomedoc.ui.mainfragment.Chat_frag;
 import com.zkr.peoplehomedoc.ui.mainfragment.Home_frag;
@@ -30,10 +32,11 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     private Fragment mHomeFragment;
     private Fragment mServiceFragment;
     private Fragment mSigningFragment;
-    private Fragment mChatFragment;
+   // private Fragment mChatFragment;
     private Fragment mUserFragment;
     private ImageView homeImg, serviceImg, signingImg, chatImg,userImg;
     private TextView homeTv, serviceTv, signingTv, chatTv,userTv;
+    private EaseChatFragment chatFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -120,11 +123,20 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 changeStatus(2);
                 break;
             case 3:
-                if (mChatFragment == null) {
-                    mChatFragment = new Chat_frag();
-                    transaction.add(R.id.cccc, mChatFragment);
+
+
+
+                if (chatFragment == null) {
+                    chatFragment = new EaseChatFragment();
+//传入参数
+                    Bundle args = new Bundle();
+                    args.putInt(EaseConstant.EXTRA_CHAT_TYPE, EaseConstant.CHATTYPE_GROUP);
+                    args.putString(EaseConstant.EXTRA_USER_ID, "zw123");
+                    chatFragment.setArguments(args);
+                    //getSupportFragmentManager().beginTransaction().add(R.id.cccc, chatFragment).commit();
+                    transaction.add(R.id.cccc, chatFragment);
                 } else {
-                    transaction.show(mChatFragment);
+                    transaction.show(chatFragment);
                 }
                 changeStatus(3);
                 break;
@@ -159,8 +171,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         if (mSigningFragment != null) {
             transaction.hide(mSigningFragment);
         }
-        if (mChatFragment != null) {
-            transaction.hide(mChatFragment);
+        if (chatFragment != null) {
+            transaction.hide(chatFragment);
         }
         if (mUserFragment != null) {
             transaction.hide(mUserFragment);
