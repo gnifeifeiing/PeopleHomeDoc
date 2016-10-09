@@ -23,7 +23,10 @@
         <activity android:name=".ui.signdoc.SignDocList_Activity" />
         <activity android:name=".ui.signdoc.Sign_Doc_Userinfo_Activity" />
         <activity android:name=".ui.signdoc.Signing_SucessActivity" />
-        <activity android:name=".ui.user.UnreadMessagesActivity"></activity>
+        <activity android:name=".ui.user.UnreadMessagesActivity" />
+        <activity android:name=".ui.user.MyReservationActivity" />
+        <activity android:name=".ui.signdoc.SubmitOrderActivity" />
+        <activity android:name=".ui.signdoc.PayActivity"></activity>
     </application>
 
 </manifest>
