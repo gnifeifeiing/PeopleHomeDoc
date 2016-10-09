@@ -94,6 +94,7 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="5dp"
                 android:layout_weight="1"
+                android:visibility="invisible"
                 android:src="@mipmap/signing_frag" />
 
             <TextView
@@ -159,5 +160,26 @@
                 android:textSize="12sp" />
         </LinearLayout>
     </LinearLayout>
+    <ImageView
 
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:layout_weight="1"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:src="@mipmap/signing_round" />
+    <ImageView
+
+        android:layout_width="26dp"
+        android:layout_height="46dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:layout_weight="1"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:src="@mipmap/signing_search" />
 </RelativeLayout>
