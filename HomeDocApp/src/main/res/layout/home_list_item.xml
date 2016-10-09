@@ -1,60 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal" android:layout_width="match_parent"
-    android:background="@drawable/home_health_mg_shape"
     android:paddingTop="10dp"
     android:paddingBottom="10dp"
-    android:paddingLeft="5dp"
+    android:paddingLeft="10dp"
     android:gravity="center_vertical"
     android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/tv_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:textSize="@dimen/level_second_text_size"
-        android:layout_marginLeft="10dp"
-        android:text="坚持每日散步1-1.5小时，放慢生活、工作节奏，更多的感受快乐。"/>
-
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="70dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/home_news_img01"/>
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:gravity="center_vertical"
         android:layout_marginRight="5dp"
-        android:orientation="horizontal">
-        <CheckBox
-            android:id="@+id/tv_yes"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tv_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:button="@null"
-            android:textStyle="bold"
-            android:paddingTop="3dp"
-            android:paddingBottom="3dp"
-            android:paddingLeft="8dp"
-            android:paddingRight="8dp"
-            android:textColor="@color/white"
-            android:checked="true"
-            android:background="@drawable/home_list_item_yes_no"
-            android:layout_toLeftOf="@+id/tv_no"
-            android:layout_marginRight="5dp"
-            android:text="Y"/>
-        <CheckBox
-            android:id="@+id/tv_no"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/level_second_text_size"
+            android:layout_marginLeft="10dp"
+            android:text="坚持每日散步1-1.5小时，放慢生活、工作节奏，更多的感受快乐。"/>
+
+        <TextView
+            android:id="@+id/tv_content"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:button="@null"
-            android:textStyle="bold"
-            android:paddingTop="3dp"
-            android:paddingBottom="3dp"
-            android:paddingLeft="8dp"
-            android:paddingRight="8dp"
-            android:textColor="@color/white"
-            android:background="@drawable/home_list_item_yes_no"
-            android:layout_alignParentRight="true"
-            android:text="N"/>
+            android:layout_marginTop="5dp"
+            android:lineSpacingExtra="3dp"
+            android:layout_marginLeft="10dp"
+            android:text="全民健康生活方式行动由国家卫生计生委疾病预防控制局、全国爱卫会办公室和中国疾病…"/>
     </LinearLayout>
 
 </LinearLayout>
