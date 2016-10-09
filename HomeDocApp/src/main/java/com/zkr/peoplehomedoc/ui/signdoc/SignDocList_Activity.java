@@ -15,6 +15,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.zkr.peoplehomedoc.R;
+import com.zkr.peoplehomedoc.widget.TitleBarUtils;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -32,6 +33,8 @@ public class SignDocList_Activity extends AppCompatActivity {
     @Bind(R.id.list_view)
     ListView listView;
     MyAdapter adapter;
+    @Bind(R.id.titleBar)
+    TitleBarUtils titleBar;
     private List<Map<String, Object>> list = new ArrayList<>();
 
     @Override
@@ -39,16 +42,27 @@ public class SignDocList_Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_doc_list_);
         ButterKnife.bind(this);
-        Map<String,Object> map1=new HashMap<>();
-        map1.put("00","0");
+        Map<String, Object> map1 = new HashMap<>();
+        map1.put("00", "0");
         list.add(map1);
         list.add(map1);
         list.add(map1);
         list.add(map1);
-        adapter=new MyAdapter(this);
+        adapter = new MyAdapter(this);
         listView.setAdapter(adapter);
+        initTitle();
     }
 
+    private void initTitle() {
+        titleBar.setTitle("签约医生");
+        titleBar.setLeftButtonClick(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+    }
 
     private class MyAdapter extends BaseAdapter {
         private LayoutInflater mInflater;
@@ -83,7 +97,7 @@ public class SignDocList_Activity extends AppCompatActivity {
             if (convertView == null) {
                 viewHolder = new ViewHolder();
                 convertView = mInflater.inflate(R.layout.signing_frag_list_item, null);
-                viewHolder.gosignning= (LinearLayout) convertView.findViewById(R.id.gosignning);
+                viewHolder.gosignning = (LinearLayout) convertView.findViewById(R.id.gosignning);
                 viewHolder.tv_doc_name = (TextView) convertView.findViewById(R.id.tv_doc_name);
                 viewHolder.tv_doc_dept = (TextView) convertView.findViewById(R.id.tv_doc_dept);
                 viewHolder.tv_doc_desc = (TextView) convertView.findViewById(R.id.tv_doc_desc);

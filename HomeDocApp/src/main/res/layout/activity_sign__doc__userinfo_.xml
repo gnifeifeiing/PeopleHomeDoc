@@ -3,24 +3,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+
     android:background="@color/white"
     android:orientation="vertical"
     tools:context="com.zkr.peoplehomedoc.ui.signdoc.Sign_Doc_Userinfo_Activity">
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/title_bar_height"
-        android:background="#00bca4">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="签约医生"
-            android:textColor="@color/white"
-            android:textSize="@dimen/level_title_text_size"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:textStyle="bold" />
-    </RelativeLayout>
+
+
+    <com.zkr.peoplehomedoc.widget.TitleBarUtils
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_bar_height" />
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -52,6 +47,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:hint="姓名"
+            android:textSize="@dimen/level_small_text_size"
             android:background="@drawable/register_et_border_drawable"
             />
         <EditText
@@ -62,6 +58,7 @@
             android:layout_marginRight="10dp"
             android:hint="身份证号"
             android:inputType="number"
+            android:textSize="@dimen/level_small_text_size"
             android:digits="0123456789xyzXYZ"
             android:background="@drawable/register_et_border_drawable"
             />
@@ -77,6 +74,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:hint="性别"
+            android:textSize="@dimen/level_small_text_size"
             android:id="@+id/sex"
             android:enabled="false"
             android:background="@drawable/register_et_border_drawable"
@@ -97,6 +95,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:hint="联系电话"
+            android:textSize="@dimen/level_small_text_size"
             android:inputType="number"
             android:background="@drawable/register_et_border_drawable"
             />
@@ -109,6 +108,7 @@
             android:layout_marginRight="10dp"
             android:background="@drawable/register_et_border_drawable"
             android:gravity="top"
+            android:textSize="@dimen/level_small_text_size"
             android:hint="家庭住址"
             />
         <Button
@@ -118,7 +118,7 @@
             android:layout_height="wrap_content"
             android:textColor="@color/white"
             android:text="签约"
-            android:textSize="@dimen/et_text_size"
+            android:textSize="@dimen/fab_margin"
             android:background="@drawable/signing_frag_header_btn"
             android:id="@+id/signing" />
 

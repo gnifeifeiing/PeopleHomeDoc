@@ -31,7 +31,7 @@ public class AppointmentListActivity extends BaseActivity {
     TitleBarUtils titleBar;
     @Bind(R.id.lv_plan)
     ListView lvPlan;
-    
+
     private List<Map<String, Object>> list;
 
     @Override

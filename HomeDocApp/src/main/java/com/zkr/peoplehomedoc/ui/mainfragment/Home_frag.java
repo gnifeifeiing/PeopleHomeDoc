@@ -1,11 +1,13 @@
 package com.zkr.peoplehomedoc.ui.mainfragment;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -14,6 +16,7 @@ import com.zkr.peoplehomedoc.R;
 import com.zkr.peoplehomedoc.ui.appointmentDoctor.AppointmentMainActivity;
 import com.zkr.peoplehomedoc.ui.docAdvice.DocAdviceListActivity;
 import com.zkr.peoplehomedoc.ui.mySigning.MySigningListActivity;
+import com.zkr.peoplehomedoc.ui.news.NewsDetail;
 import com.zkr.peoplehomedoc.ui.servicePlan.ServicePlanListActivity;
 import com.zkr.peoplehomedoc.utils.ActivityUtil;
 import com.zkr.peoplehomedoc.widget.FitListView;
@@ -68,6 +71,13 @@ public class Home_frag extends Fragment implements View.OnClickListener {
         llServicePlan.setOnClickListener(this);
         llDocAdvice.setOnClickListener(this);
         llMySigning.setOnClickListener(this);
+        lvDocAdvice.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent=new Intent(getActivity(), NewsDetail.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void initData() {

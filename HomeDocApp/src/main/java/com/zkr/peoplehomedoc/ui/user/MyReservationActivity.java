@@ -1,7 +1,6 @@
 package com.zkr.peoplehomedoc.ui.user;
 
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,7 +12,7 @@ import android.widget.TextView;
 
 import com.zkr.peoplehomedoc.R;
 import com.zkr.peoplehomedoc.base.BaseActivity;
-import com.zkr.peoplehomedoc.ui.signdoc.Sign_Doc_Userinfo_Activity;
+import com.zkr.peoplehomedoc.widget.TitleBarUtils;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -27,18 +26,33 @@ public class MyReservationActivity extends BaseActivity {
 
     @Bind(R.id.listview)
     ListView listview;
+    @Bind(R.id.titleBar)
+    TitleBarUtils titleBar;
     private List<Map<String, Object>> list = new ArrayList<>();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_reservation);
         ButterKnife.bind(this);
-        MyAdapter adapter=new MyAdapter(this);
+        MyAdapter adapter = new MyAdapter(this);
         list.add(new HashMap<String, Object>());
         list.add(new HashMap<String, Object>());
         listview.setAdapter(adapter);
-
+        initTitle();
     }
+
+    private void initTitle() {
+        titleBar.setTitle("我的预约");
+        titleBar.setLeftButtonClick(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+    }
+
     private class MyAdapter extends BaseAdapter {
         private LayoutInflater mInflater;
 
@@ -72,7 +86,7 @@ public class MyReservationActivity extends BaseActivity {
             if (convertView == null) {
                 viewHolder = new ViewHolder();
                 convertView = mInflater.inflate(R.layout.item_reservation, null);
-                 convertView.setTag(viewHolder);
+                convertView.setTag(viewHolder);
             } else {
                 viewHolder = (ViewHolder) convertView.getTag();
             }

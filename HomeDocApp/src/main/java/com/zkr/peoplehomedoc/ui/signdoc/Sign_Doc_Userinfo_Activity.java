@@ -17,6 +17,7 @@ import android.widget.TextView;
 import com.zkr.peoplehomedoc.R;
 import com.zkr.peoplehomedoc.adapter.SexAdapter;
 import com.zkr.peoplehomedoc.base.BaseActivity;
+import com.zkr.peoplehomedoc.widget.TitleBarUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,6 +37,8 @@ public class Sign_Doc_Userinfo_Activity extends BaseActivity {
     EditText homeaddress;
     @Bind(R.id.signing)
     Button signing;
+    @Bind(R.id.titleBar)
+    TitleBarUtils titleBar;
     private PopupWindow popupWindow;
 
     @Override
@@ -48,6 +51,7 @@ public class Sign_Doc_Userinfo_Activity extends BaseActivity {
 
     private void initView() {
         initEvent();
+        initTitle();
 
 
     }
@@ -65,6 +69,17 @@ public class Sign_Doc_Userinfo_Activity extends BaseActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(getBaseContext(), Signing_SucessActivity.class);
                 startActivity(intent);
+            }
+        });
+    }
+
+    private void initTitle() {
+        titleBar.setTitle("签约医生");
+        titleBar.setLeftButtonClick(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                finish();
             }
         });
     }

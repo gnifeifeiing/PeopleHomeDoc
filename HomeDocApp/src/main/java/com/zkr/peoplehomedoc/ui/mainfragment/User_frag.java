@@ -12,6 +12,8 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.zkr.peoplehomedoc.R;
+import com.zkr.peoplehomedoc.ui.appointmentDoctor.AppointmentMainActivity;
+import com.zkr.peoplehomedoc.ui.mySigning.MySigningListActivity;
 import com.zkr.peoplehomedoc.ui.servicePlan.ServicePlanListActivity;
 import com.zkr.peoplehomedoc.ui.user.MyReservationActivity;
 import com.zkr.peoplehomedoc.ui.user.UnreadMessagesActivity;
@@ -74,17 +76,36 @@ public class User_frag extends Fragment {
                 startActivity(intent);
             }
         });
+        //签约单
         myyuyue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(getActivity(), MyReservationActivity.class);
+                Intent intent=new Intent(getActivity(), MySigningListActivity.class);
                 startActivity(intent);
             }
         });
+
         weiwanfuwu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(getActivity(), ServicePlanListActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        //消费单
+        jiuyika.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getActivity(), MySigningListActivity.class);
+                startActivity(intent);
+            }
+        });
+        //签约医生
+        jiuyika1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getActivity(), AppointmentMainActivity.class);
                 startActivity(intent);
             }
         });
