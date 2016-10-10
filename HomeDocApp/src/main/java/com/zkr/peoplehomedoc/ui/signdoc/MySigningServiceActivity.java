@@ -244,6 +244,27 @@ public class MySigningServiceActivity extends BaseActivity implements View.OnCli
                 popupWindow.setFocusable(false);
                 // 设置好参数之后再show
                 popupWindow.showAtLocation(MySigningServiceActivity.this.findViewById(R.id.ll_all), Gravity.BOTTOM|Gravity.LEFT, 0, 0);
+                contentView.setOnTouchListener(new View.OnTouchListener() {
+                    int orgX, orgY;
+                    int offsetX, offsetY;
+
+                    @Override
+                    public boolean onTouch(View v, MotionEvent event) {
+                        switch (event.getAction()) {
+                            case MotionEvent.ACTION_DOWN:
+                                orgX = (int) event.getX();
+                                orgY = (int) event.getY();
+                                break;
+                            case MotionEvent.ACTION_MOVE:
+                                offsetX = (int) event.getRawX() - orgX;
+                                offsetY =  orgY-(int) event.getRawY();
+                                popupWindow.update(offsetX, offsetY, -1, -1, true);
+                                break;
+
+                        }
+                        return true;
+                    }
+                });
             }
             ll_content.removeAllViews();
             for(int i=0;i<savePosition.size();i++){
