@@ -88,13 +88,19 @@ public class Service_frag extends Fragment {
             if (convertView == null) {
                 viewHolder = new ViewHolder();
                 convertView = mInflater.inflate(R.layout.item_signservelist, null);
-                viewHolder.tv_doc_name = (TextView) convertView.findViewById(R.id.tv_doc_name);
+                viewHolder.tv_doc_name = (TextView) convertView.findViewById(R.id.tv_doc_hos);
                 viewHolder.tv_doc_dept = (TextView) convertView.findViewById(R.id.tv_doc_dept);
                 viewHolder.tv_doc_desc = (TextView) convertView.findViewById(R.id.tv_doc_desc);
                 viewHolder.button1= (Button) convertView.findViewById(R.id.button3);
                 convertView.setTag(viewHolder);
             } else {
                 viewHolder = (ViewHolder) convertView.getTag();
+            }
+            if (position==1){
+                viewHolder.tv_doc_name.setText("免费体检包 一月一次");
+            }
+            if (position==3){
+                viewHolder.tv_doc_name.setText("身体隐藏疾病检查 季度上门服务一次");
             }
             viewHolder.button1.setOnClickListener(new View.OnClickListener() {
                 @Override

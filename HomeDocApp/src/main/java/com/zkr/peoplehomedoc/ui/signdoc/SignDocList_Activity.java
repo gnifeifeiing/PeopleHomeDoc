@@ -3,7 +3,6 @@ package com.zkr.peoplehomedoc.ui.signdoc;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,6 +14,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.zkr.peoplehomedoc.R;
+import com.zkr.peoplehomedoc.base.BaseActivity;
 import com.zkr.peoplehomedoc.widget.TitleBarUtils;
 
 import java.util.ArrayList;
@@ -25,7 +25,7 @@ import java.util.Map;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
-public class SignDocList_Activity extends AppCompatActivity {
+public class SignDocList_Activity extends BaseActivity {
     @Bind(R.id.search_et_input)
     EditText searchEtInput;
     @Bind(R.id.search_in)
@@ -35,6 +35,16 @@ public class SignDocList_Activity extends AppCompatActivity {
     MyAdapter adapter;
     @Bind(R.id.titleBar)
     TitleBarUtils titleBar;
+    @Bind(R.id.l1)
+    LinearLayout l1;
+    @Bind(R.id.l2)
+    LinearLayout l2;
+    @Bind(R.id.l3)
+    LinearLayout l3;
+    @Bind(R.id.l4)
+    LinearLayout l4;
+    @Bind(R.id.l5)
+    LinearLayout l5;
     private List<Map<String, Object>> list = new ArrayList<>();
 
     @Override
@@ -51,6 +61,41 @@ public class SignDocList_Activity extends AppCompatActivity {
         adapter = new MyAdapter(this);
         listView.setAdapter(adapter);
         initTitle();
+        l1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getBaseContext(),MySigningServiceActivity.class);
+                startActivity(intent);
+            }
+        });
+        l2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getBaseContext(),MySigningServiceActivity.class);
+                startActivity(intent);
+            }
+        });
+        l3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getBaseContext(),MySigningServiceActivity.class);
+                startActivity(intent);
+            }
+        });
+        l4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getBaseContext(),MySigningServiceActivity.class);
+                startActivity(intent);
+            }
+        });
+        l5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getBaseContext(),MySigningServiceActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void initTitle() {
