@@ -30,6 +30,7 @@ public class Signing_SucessActivity extends BaseActivity {
             public void onClick(View v) {
                 Intent intent=new Intent(getBaseContext(),MySigningServiceActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
     }

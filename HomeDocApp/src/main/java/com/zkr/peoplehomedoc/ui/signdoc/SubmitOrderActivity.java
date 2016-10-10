@@ -28,6 +28,7 @@ public class SubmitOrderActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getBaseContext(), PayActivity.class);
+                finish();
                 startActivity(intent);
             }
         });

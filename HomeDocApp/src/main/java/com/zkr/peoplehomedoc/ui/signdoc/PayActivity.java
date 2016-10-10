@@ -67,6 +67,7 @@ public class PayActivity extends BaseActivity implements View.OnClickListener {
             case R.id.pay:
                 Intent intent = new Intent(getBaseContext(), SignServeSucess.class);
                 startActivity(intent);
+                finish();
                 break;
         }
     }

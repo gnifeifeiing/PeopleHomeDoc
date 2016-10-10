@@ -68,7 +68,9 @@ public class Sign_Doc_Userinfo_Activity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getBaseContext(), Signing_SucessActivity.class);
+
                 startActivity(intent);
+                finish();
             }
         });
     }
