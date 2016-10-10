@@ -6,8 +6,10 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.zkr.peoplehomedoc.MainActivity;
 import com.zkr.peoplehomedoc.R;
 import com.zkr.peoplehomedoc.base.BaseActivity;
+import com.zkr.peoplehomedoc.utils.ActivityUtil;
 import com.zkr.peoplehomedoc.widget.TitleBarUtils;
 
 import butterknife.Bind;
@@ -52,6 +54,14 @@ public class AppointmentInfoActivity extends BaseActivity implements View.OnClic
 
             @Override
             public void onClick(View v) {
+                finish();
+            }
+        });
+        titleBar.setRightImageOne(R.mipmap.back_home);
+        titleBar.setRightButtonOneClick(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ActivityUtil.switchTo(AppointmentInfoActivity.this, MainActivity.class,false);
                 finish();
             }
         });

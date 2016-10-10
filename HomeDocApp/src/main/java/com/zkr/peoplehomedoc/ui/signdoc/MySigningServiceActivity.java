@@ -236,7 +236,7 @@ public class MySigningServiceActivity extends BaseActivity implements View.OnCli
                 contentView = LayoutInflater.from(MySigningServiceActivity.this).inflate(
                         R.layout.my_signing_service_shopping_popwindow, null);
                 final PopupWindow popupWindow = new PopupWindow(contentView,
-                        ConvertDpAndPx.Dp2Px(MySigningServiceActivity.this,160), ConvertDpAndPx.Dp2Px(MySigningServiceActivity.this,160), true);
+                        ConvertDpAndPx.Dp2Px(MySigningServiceActivity.this,200), ConvertDpAndPx.Dp2Px(MySigningServiceActivity.this,220), true);
                 // 设置按钮的点击事件
                 tv_submit = (TextView) contentView.findViewById(R.id.btn_submit);
                 ll_content=(LinearLayout) contentView.findViewById(R.id.ll_content);

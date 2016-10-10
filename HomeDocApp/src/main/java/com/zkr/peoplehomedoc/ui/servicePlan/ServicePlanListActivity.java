@@ -144,6 +144,7 @@ public class ServicePlanListActivity extends BaseActivity {
                 @Override
                 public void onClick(View v) {
                     ActivityUtil.switchTo(ServicePlanListActivity.this,AppointmentListActivity.class,false);
+                    ServicePlanListActivity.this.finish();
                 }
             });
             return convertView;
