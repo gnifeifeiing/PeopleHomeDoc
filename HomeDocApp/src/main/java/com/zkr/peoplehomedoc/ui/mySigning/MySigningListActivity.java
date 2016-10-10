@@ -56,20 +56,23 @@ public class MySigningListActivity extends BaseActivity {
     private void initData() {
         list = new ArrayList<>();
         map = new HashMap<>();
-        map.put("title", "某某卫生院   张敏瑞医生");
+        map.put("title", "省人民医院   张敏瑞医生");
         map.put("time", "签约时间：2016-10-12 10:02:00");
+        map.put("fee", "签约费用：36元");
         map.put("state", "当前状态：未缴费");
         list.add(map);
 
         map = new HashMap<>();
-        map.put("title", "某某卫生院   张敏瑞医生");
+        map.put("title", "省肿瘤医院   孙国鸿医生");
         map.put("time", "签约时间：2016-10-01 14:25:00");
+        map.put("fee", "签约费用：188元");
         map.put("state", "当前状态：已缴费");
         list.add(map);
 
         map = new HashMap<>();
-        map.put("title", "某某卫生院   张敏瑞医生");
+        map.put("title", "省中医院   张琳医生");
         map.put("time", "签约时间：2016-09-21 10:02:00");
+        map.put("fee", "签约费用：10元");
         map.put("state", "当前状态：已完成");
         list.add(map);
 
@@ -127,6 +130,7 @@ public class MySigningListActivity extends BaseActivity {
                 viewHolder.tv_title = (TextView) convertView.findViewById(R.id.tv_title);
                 viewHolder.tv_date = (TextView) convertView.findViewById(R.id.tv_date);
                 viewHolder.tv_state = (TextView) convertView.findViewById(R.id.tv_state);
+                viewHolder.tv_fee = (TextView) convertView.findViewById(R.id.tv_fee);
                 convertView.setTag(viewHolder);
             } else {
                 viewHolder = (ViewHolder) convertView.getTag();
@@ -135,6 +139,7 @@ public class MySigningListActivity extends BaseActivity {
             viewHolder.tv_title.setText(list.get(position).get("title").toString());
             viewHolder.tv_date.setText(list.get(position).get("time").toString());
             viewHolder.tv_state.setText(list.get(position).get("state").toString());
+            viewHolder.tv_fee.setText(list.get(position).get("fee").toString());
             convertView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -145,7 +150,7 @@ public class MySigningListActivity extends BaseActivity {
         }
 
         class ViewHolder {
-            TextView tv_title, tv_date, tv_state;
+            TextView tv_title, tv_fee,tv_date, tv_state;
         }
     }
 }

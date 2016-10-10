@@ -59,15 +59,18 @@ public class DocAdviceListActivity extends BaseActivity {
     private void initData() {
         list = new ArrayList<>();
         map = new HashMap<>();
-        map.put("title", "高血压管理包   季度随访一次");
+        map.put("title", "牙齿美白又快又好的方法");
+        map.put("content", "冷光美白是一项正流行于欧美的最新的牙齿美白技术，它不仅可以去除牙齿表面的色素沉积，同时可进入牙齿深层达到脱色的效果。");
         list.add(map);
 
         map = new HashMap<>();
-        map.put("title", "高血压管理包   季度随访一次");
+        map.put("title", "如何改善失眠");
+        map.put("content", "建议你积极服用谷维素+刺五加+B1片来调理,注意营养和休息保持心情愉悦,如有什么不明白的,欢迎你再次提问,我们会对你的问题密切关注.");
         list.add(map);
 
         map = new HashMap<>();
-        map.put("title", "高血压管理包   季度随访一次");
+        map.put("title", "炎支原体抗体(mPAd)+1:160");
+        map.put("content", "在药物治疗上以大环内酯类抗生素如罗红霉素等药物为主,这个疾病是可以治愈的只是需要用药的时间比较长,在用抗生素的同时可以根据辨证用中药进行辅助治疗效果是不错的");
         list.add(map);
 
     }
@@ -130,7 +133,7 @@ public class DocAdviceListActivity extends BaseActivity {
             }
 
             viewHolder.tv_title.setText(list.get(position).get("title").toString());
-            viewHolder.tv_desc.setText(Html.fromHtml("<span><B>医生建议:</B>坚持每日散步1-1.5小时，放慢生活、工作节奏，保持快乐的心情。适当减少肉食的摄入量，以每日不超过4两（200g）为宜。</span>"));
+            viewHolder.tv_desc.setText(Html.fromHtml("<span><B>医生建议:</B>"+list.get(position).get("content").toString()+"</span>"));
             convertView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
