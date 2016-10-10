@@ -186,11 +186,11 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
      */
     private void changeStatus(int position) {
         // 重置所有图片
-        homeImg.setImageResource(R.mipmap.home_frag);
-        serviceImg.setImageResource(R.mipmap.signing_frag);
+        homeImg.setImageResource(R.mipmap.shouye1);
+        serviceImg.setImageResource(R.mipmap.fuwu1);
         signingImg.setImageResource(R.mipmap.signing_frag);
-        chatImg.setImageResource(R.mipmap.doc_frag);
-        userImg.setImageResource(R.mipmap.user_frag);
+        chatImg.setImageResource(R.mipmap.zixun1);
+        userImg.setImageResource(R.mipmap.wode1);
         // 重置所有文本的颜色
         homeTv.setTextColor(Color.parseColor("#999999"));
         serviceTv.setTextColor(Color.parseColor("#999999"));
@@ -200,11 +200,11 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         // 改变对应图片和文本颜色
         switch (position) {
             case 0:
-                homeImg.setImageResource(R.mipmap.home_frag);
+                homeImg.setImageResource(R.mipmap.shouye);
                 homeTv.setTextColor(Color.parseColor("#2fad68"));
                 break;
             case 1:
-                serviceImg.setImageResource(R.mipmap.signing_frag);
+                serviceImg.setImageResource(R.mipmap.fuwu);
                 serviceTv.setTextColor(Color.parseColor("#2fad68"));
                 break;
             case 2:
@@ -212,11 +212,11 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 signingTv.setTextColor(Color.parseColor("#2fad68"));
                 break;
             case 3:
-                chatImg.setImageResource(R.mipmap.doc_frag);
+                chatImg.setImageResource(R.mipmap.zixun);
                 chatTv.setTextColor(Color.parseColor("#2fad68"));
                 break;
             case 4:
-                userImg.setImageResource(R.mipmap.user_frag);
+                userImg.setImageResource(R.mipmap.wode);
                 userTv.setTextColor(Color.parseColor("#2fad68"));
                 break;
             default:

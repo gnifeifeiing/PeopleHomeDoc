@@ -43,7 +43,7 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="5dp"
                 android:layout_weight="1"
-                android:src="@mipmap/home_frag" />
+                android:src="@mipmap/shouye1" />
 
             <TextView
                 android:id="@+id/tab_home_text"
@@ -69,7 +69,7 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="5dp"
                 android:layout_weight="1"
-                android:src="@mipmap/signing_frag" />
+                android:src="@mipmap/fuwu1" />
 
             <TextView
                 android:id="@+id/tab_service_text"
@@ -121,7 +121,7 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="5dp"
                 android:layout_weight="1"
-                android:src="@mipmap/doc_frag" />
+                android:src="@mipmap/zixun1" />
 
             <TextView
                 android:id="@+id/tab_chat_text"
@@ -148,7 +148,7 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="5dp"
                 android:layout_weight="1"
-                android:src="@mipmap/user_frag" />
+                android:src="@mipmap/wode1" />
 
             <TextView
                 android:id="@+id/tab_user_text"

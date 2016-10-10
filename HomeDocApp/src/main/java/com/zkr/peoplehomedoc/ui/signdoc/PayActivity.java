@@ -8,7 +8,7 @@ import android.widget.RadioButton;
 
 import com.zkr.peoplehomedoc.R;
 import com.zkr.peoplehomedoc.base.BaseActivity;
-import com.zkr.peoplehomedoc.ui.user.MyReservationActivity;
+import com.zkr.peoplehomedoc.widget.TitleBarUtils;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -25,17 +25,20 @@ public class PayActivity extends BaseActivity implements View.OnClickListener {
     RadioButton radiobutton3;
     @Bind(R.id.radiobutton4)
     RadioButton radiobutton4;
+    @Bind(R.id.titleBar)
+    TitleBarUtils titleBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pay);
         ButterKnife.bind(this);
+        initTitle();
     }
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.radiobutton1:
                 radiobutton2.setChecked(false);
                 radiobutton3.setChecked(false);
@@ -57,9 +60,20 @@ public class PayActivity extends BaseActivity implements View.OnClickListener {
                 radiobutton1.setChecked(false);
                 break;
             case R.id.pay:
-                Intent intent=new Intent(getBaseContext(), SignServeSucess.class);
+                Intent intent = new Intent(getBaseContext(), SignServeSucess.class);
                 startActivity(intent);
                 break;
         }
+    }
+
+    private void initTitle() {
+        titleBar.setTitle("签约服务");
+        titleBar.setLeftButtonClick(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 }

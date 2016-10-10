@@ -7,7 +7,7 @@ import android.widget.Button;
 
 import com.zkr.peoplehomedoc.R;
 import com.zkr.peoplehomedoc.base.BaseActivity;
-import com.zkr.peoplehomedoc.ui.user.MyReservationActivity;
+import com.zkr.peoplehomedoc.widget.TitleBarUtils;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -16,6 +16,8 @@ public class SubmitOrderActivity extends BaseActivity {
 
     @Bind(R.id.submmit)
     Button submmit;
+    @Bind(R.id.titleBar)
+    TitleBarUtils titleBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,8 +27,20 @@ public class SubmitOrderActivity extends BaseActivity {
         submmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(getBaseContext(), PayActivity.class);
+                Intent intent = new Intent(getBaseContext(), PayActivity.class);
                 startActivity(intent);
+            }
+        });
+      initTitle();
+    }
+
+    private void initTitle() {
+        titleBar.setTitle("签约服务");
+        titleBar.setLeftButtonClick(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                finish();
             }
         });
     }
