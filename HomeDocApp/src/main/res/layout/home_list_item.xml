@@ -34,6 +34,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:lineSpacingExtra="3dp"
+            android:maxLines="3"
             android:layout_marginLeft="10dp"
             android:text="全民健康生活方式行动由国家卫生计生委疾病预防控制局、全国爱卫会办公室和中国疾病…"/>
     </LinearLayout>
