@@ -5,6 +5,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.zkr.peoplehomedoc.MainActivity;
 import com.zkr.peoplehomedoc.R;
 import com.zkr.peoplehomedoc.base.BaseActivity;
 import com.zkr.peoplehomedoc.ui.servicePlan.AppointmentListActivity;
@@ -69,6 +70,14 @@ public class SignServeSucess extends BaseActivity {
 
             @Override
             public void onClick(View v) {
+                finish();
+            }
+        });
+        titleBar.setRightImageOne(R.mipmap.back_home);
+        titleBar.setRightButtonOneClick(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ActivityUtil.switchTo(SignServeSucess.this, MainActivity.class,false);
                 finish();
             }
         });
