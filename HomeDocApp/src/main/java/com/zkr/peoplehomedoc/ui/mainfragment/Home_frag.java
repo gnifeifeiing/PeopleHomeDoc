@@ -17,14 +17,13 @@ import com.zkr.peoplehomedoc.ui.appointmentDoctor.AppointmentMainActivity;
 import com.zkr.peoplehomedoc.ui.docAdvice.DocAdviceListActivity;
 import com.zkr.peoplehomedoc.ui.mySigning.MySigningListActivity;
 import com.zkr.peoplehomedoc.ui.news.NewsDetail;
+import com.zkr.peoplehomedoc.ui.servicePlan.AppointmentListActivity;
 import com.zkr.peoplehomedoc.ui.servicePlan.ServicePlanListActivity;
 import com.zkr.peoplehomedoc.utils.ActivityUtil;
 import com.zkr.peoplehomedoc.widget.FitListView;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -44,8 +43,10 @@ public class Home_frag extends Fragment implements View.OnClickListener {
     LinearLayout llDocAdvice;
     @Bind(R.id.ll_my_signing)
     LinearLayout llMySigning;
+    @Bind(R.id.tv_home_appointment)
+    TextView tvHomeAppointment;
 
-    private List<String> list=new ArrayList<>();
+    private List<String> list = new ArrayList<>();
     private MyAdapter adapter;
 
     @Override
@@ -62,7 +63,7 @@ public class Home_frag extends Fragment implements View.OnClickListener {
     }
 
     private void initWidget() {
-        adapter=new MyAdapter(getActivity());
+        adapter = new MyAdapter(getActivity());
         lvDocAdvice.setAdapter(adapter);
         //解决页面切换后总显示listview问题，而不显示其他view
         lvDocAdvice.setFocusable(false);
@@ -71,10 +72,11 @@ public class Home_frag extends Fragment implements View.OnClickListener {
         llServicePlan.setOnClickListener(this);
         llDocAdvice.setOnClickListener(this);
         llMySigning.setOnClickListener(this);
+        tvHomeAppointment.setOnClickListener(this);
         lvDocAdvice.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent=new Intent(getActivity(), NewsDetail.class);
+                Intent intent = new Intent(getActivity(), NewsDetail.class);
                 startActivity(intent);
             }
         });
@@ -103,6 +105,9 @@ public class Home_frag extends Fragment implements View.OnClickListener {
                 break;
             case R.id.ll_my_signing:
                 ActivityUtil.switchTo(getActivity(), MySigningListActivity.class, false);
+                break;
+            case R.id.tv_home_appointment:
+                ActivityUtil.switchTo(getActivity(), AppointmentListActivity.class, false);
                 break;
         }
     }
