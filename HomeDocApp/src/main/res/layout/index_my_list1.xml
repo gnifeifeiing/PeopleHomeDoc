@@ -28,7 +28,7 @@
             android:layout_gravity="center_horizontal"
             android:textColor="@color/white"
             android:textStyle="bold"
-            android:text="未登录"
+            android:text="宋瑞"
            />
 
     </LinearLayout>
