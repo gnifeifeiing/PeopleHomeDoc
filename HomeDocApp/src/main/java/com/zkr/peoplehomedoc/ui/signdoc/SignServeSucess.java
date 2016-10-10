@@ -8,8 +8,8 @@ import android.widget.TextView;
 import com.zkr.peoplehomedoc.R;
 import com.zkr.peoplehomedoc.base.BaseActivity;
 import com.zkr.peoplehomedoc.ui.servicePlan.AppointmentListActivity;
-import com.zkr.peoplehomedoc.ui.servicePlan.ServicePlanListActivity;
 import com.zkr.peoplehomedoc.utils.ActivityUtil;
+import com.zkr.peoplehomedoc.widget.TitleBarUtils;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -34,30 +34,43 @@ public class SignServeSucess extends BaseActivity {
     TextView textView15;
     @Bind(R.id.button2)
     Button button2;
+    @Bind(R.id.titleBar)
+    TitleBarUtils titleBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_serve_sucess);
         ButterKnife.bind(this);
+        initTitle();
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ActivityUtil.switchTo(SignServeSucess.this,AppointmentListActivity.class,false);
+                ActivityUtil.switchTo(SignServeSucess.this, AppointmentListActivity.class, false);
             }
         });
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ActivityUtil.switchTo(SignServeSucess.this,AppointmentListActivity.class,false);
+                ActivityUtil.switchTo(SignServeSucess.this, AppointmentListActivity.class, false);
             }
         });
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ActivityUtil.switchTo(SignServeSucess.this,AppointmentListActivity.class,false);
+                ActivityUtil.switchTo(SignServeSucess.this, AppointmentListActivity.class, false);
             }
         });
     }
 
+    private void initTitle() {
+        titleBar.setTitle("签约医生");
+        titleBar.setLeftButtonClick(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+    }
 }
