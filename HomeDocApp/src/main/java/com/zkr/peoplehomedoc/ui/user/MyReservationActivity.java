@@ -86,9 +86,14 @@ public class MyReservationActivity extends BaseActivity {
             if (convertView == null) {
                 viewHolder = new ViewHolder();
                 convertView = mInflater.inflate(R.layout.item_reservation, null);
+                viewHolder.tv_doc_name= (TextView) findViewById(R.id.tv_doc_hos);
+
                 convertView.setTag(viewHolder);
             } else {
                 viewHolder = (ViewHolder) convertView.getTag();
+            }
+            if (position==1){
+                viewHolder.tv_doc_name.setText("就诊医院： 北京第一人民医院 全科 张芸医生");
             }
             return convertView;
         }

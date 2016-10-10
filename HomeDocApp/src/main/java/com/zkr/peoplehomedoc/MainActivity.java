@@ -131,7 +131,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 //传入参数
                     Bundle args = new Bundle();
                     args.putInt(EaseConstant.EXTRA_CHAT_TYPE, EaseConstant.CHATTYPE_GROUP);
-                    args.putString(EaseConstant.EXTRA_USER_ID, "zw123");
+                    args.putString(EaseConstant.EXTRA_USER_ID, "张芸");
                     chatFragment.setArguments(args);
                     //getSupportFragmentManager().beginTransaction().add(R.id.cccc, chatFragment).commit();
                     transaction.add(R.id.cccc, chatFragment);
