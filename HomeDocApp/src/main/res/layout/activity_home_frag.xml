@@ -96,13 +96,9 @@
                     <LinearLayout
                         android:layout_width="55dp"
                         android:layout_height="55dp"
-                        android:background="@drawable/home_module_one_ll"
+                        android:background="@mipmap/yuyuejiuzhen"
                         android:gravity="center"
                         android:orientation="horizontal">
-                        <View
-                            android:layout_width="20dp"
-                            android:layout_height="25dp"
-                            android:background="@drawable/home_module_one"/>
                     </LinearLayout>
                     <TextView
                         android:layout_width="wrap_content"
@@ -121,13 +117,9 @@
                     <LinearLayout
                         android:layout_width="55dp"
                         android:layout_height="55dp"
-                        android:background="@drawable/home_module_two_ll"
+                        android:background="@mipmap/fuwujihua"
                         android:gravity="center"
                         android:orientation="horizontal">
-                        <View
-                            android:layout_width="20dp"
-                            android:layout_height="25dp"
-                            android:background="@drawable/home_module_one"/>
                     </LinearLayout>
                     <TextView
                         android:layout_width="wrap_content"
@@ -146,13 +138,9 @@
                     <LinearLayout
                         android:layout_width="55dp"
                         android:layout_height="55dp"
-                        android:background="@drawable/home_module_three_ll"
+                        android:background="@mipmap/yishengjianyi"
                         android:gravity="center"
                         android:orientation="horizontal">
-                        <View
-                            android:layout_width="20dp"
-                            android:layout_height="25dp"
-                            android:background="@drawable/home_module_one"/>
                     </LinearLayout>
                     <TextView
                         android:layout_width="wrap_content"
@@ -171,13 +159,9 @@
                     <LinearLayout
                         android:layout_width="55dp"
                         android:layout_height="55dp"
-                        android:background="@drawable/home_module_four_ll"
+                        android:background="@mipmap/wodeqianyue"
                         android:gravity="center"
                         android:orientation="horizontal">
-                        <View
-                            android:layout_width="20dp"
-                            android:layout_height="25dp"
-                            android:background="@drawable/home_module_one"/>
                     </LinearLayout>
                     <TextView
                         android:layout_width="wrap_content"
