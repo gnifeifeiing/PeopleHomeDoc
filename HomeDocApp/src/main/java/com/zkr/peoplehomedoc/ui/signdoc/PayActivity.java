@@ -34,6 +34,11 @@ public class PayActivity extends BaseActivity implements View.OnClickListener {
         setContentView(R.layout.activity_pay);
         ButterKnife.bind(this);
         initTitle();
+        radiobutton1.setOnClickListener(this);
+        radiobutton2.setOnClickListener(this);
+        radiobutton3.setOnClickListener(this);
+        radiobutton4.setOnClickListener(this);
+        pay.setOnClickListener(this);
     }
 
     @Override
