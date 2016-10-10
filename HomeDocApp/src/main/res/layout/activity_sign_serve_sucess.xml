@@ -110,10 +110,11 @@
                 android:layout_alignStart="@+id/textView10" />
 
             <Button
-                android:layout_width="80dp"
-                android:layout_height="40dp"
+                android:layout_width="70dp"
+                android:layout_height="30dp"
                 android:text="预约"
                 android:id="@+id/button"
+                android:textSize="14dp"
                 android:background="#90CADD"
                 android:textColor="@color/white"
                 android:layout_centerVertical="true"
@@ -156,9 +157,10 @@
                     android:layout_alignStart="@+id/textView12" />
 
                 <Button
-                    android:layout_width="80dp"
-                    android:layout_height="40dp"
+                    android:layout_width="70dp"
+                    android:layout_height="30dp"
                     android:text="改约"
+                    android:textSize="14dp"
                     android:id="@+id/button1"
                     android:background="#9ACD6B"
                     android:textColor="@color/white"
@@ -202,9 +204,10 @@
                     android:layout_alignStart="@+id/textView14" />
 
                 <Button
-                    android:layout_width="80dp"
-                    android:layout_height="40dp"
+                    android:layout_width="70dp"
+                    android:layout_height="30dp"
                     android:text="改约"
+                    android:textSize="14dp"
                     android:id="@+id/button2"
                     android:background="#9ACD6B"
                     android:textColor="@color/white"
