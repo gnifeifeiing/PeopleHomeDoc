@@ -71,6 +71,7 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:gravity="center"
+            android:textColor="@color/white"
             android:text="签约"
             android:background="@drawable/shape_cicle"
             />
