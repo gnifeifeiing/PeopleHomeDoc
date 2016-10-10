@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.zkr.peoplehomedoc.R;
+import com.zkr.peoplehomedoc.ui.signdoc.MySigningServiceActivity;
 import com.zkr.peoplehomedoc.ui.signdoc.SignDocList_Activity;
 import com.zkr.peoplehomedoc.ui.signdoc.SigningDocListActivity;
 
@@ -64,7 +65,7 @@ public class Signing_frag extends Fragment implements View.OnClickListener {
 //                ActivityUtil.switchTo(getActivity(), SigningDocListActivity.class,false);
                 break;
             case R.id.signning:
-                Intent intent1 = new Intent(getActivity(), SigningDocListActivity.class);
+                Intent intent1 = new Intent(getActivity(), MySigningServiceActivity.class);
                 startActivity(intent1);
 //                ActivityUtil.switchTo(getActivity(), SigningDocListActivity.class,false);
                 break;

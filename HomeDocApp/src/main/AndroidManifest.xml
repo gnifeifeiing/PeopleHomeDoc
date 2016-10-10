@@ -47,7 +47,7 @@
         <activity android:name=".ui.docAdvice.DocAdviceListActivity" />
         <activity android:name=".ui.docAdvice.DocAdviceDetailActivity" />
         <activity android:name=".ui.mySigning.MySigningListActivity" />
-        <activity android:name=".ui.mySigning.MySigningDetailActivity"></activity>
+        <activity android:name=".ui.mySigning.MySigningDetailActivity" />
         <activity android:name=".ui.signdoc.SignDocList_Activity" />
         <activity android:name=".ui.signdoc.Sign_Doc_Userinfo_Activity" />
         <activity android:name=".ui.signdoc.Signing_SucessActivity" />
@@ -57,7 +57,8 @@
         <activity android:name=".ui.signdoc.PayActivity" />
         <activity android:name=".ui.signdoc.SignningServerListActivity" />
         <activity android:name=".ui.signdoc.SignServeSucess" />
-        <activity android:name=".ui.news.NewsDetail"></activity>
+        <activity android:name=".ui.news.NewsDetail" />
+        <activity android:name=".ui.signdoc.MySigningServiceActivity"></activity>
     </application>
 
 </manifest>
